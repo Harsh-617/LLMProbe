@@ -58,7 +58,7 @@ def _parse_numbered_list(text: str, expected: int) -> list[str]:
         cleaned = re.sub(r"^\d+\s+", "", cleaned)
         cleaned = cleaned.strip()
 
-        if cleaned and len(cleaned) > 10:
+        if cleaned and len(cleaned) >= 5:
             paraphrases.append(cleaned)
 
     return paraphrases[:expected]
