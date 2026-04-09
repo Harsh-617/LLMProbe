@@ -27,7 +27,7 @@ class RunConfig(BaseModel):
         default="gpt-3.5-turbo",
         description="Model identifier (e.g. gpt-4o, claude-3-haiku, mistralai/Mistral-7B)"
     )
-    connector_type: Literal["openai", "anthropic", "huggingface"] = Field(
+    connector_type: Literal["openai", "anthropic", "huggingface", "groq"] = Field(
         default="openai",
         description="Which API/backend to use"
     )
