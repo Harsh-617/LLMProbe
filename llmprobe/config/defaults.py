@@ -2,7 +2,7 @@ from llmprobe.config.schema import RunConfig, ScoringWeights
 
 QUICK_RUN = RunConfig(
     run_name="quick_run",
-    model_name="llama-3.3-70b-versatile",
+    model_name="llama-3.1-8b-instant",
     connector_type="groq",
     hallucination_sample_size=10,
     consistency_sample_size=5,
@@ -13,6 +13,6 @@ QUICK_RUN = RunConfig(
 
 FULL_RUN = RunConfig(
     run_name="full_run",
-    model_name="llama-3.3-70b-versatile",
+    model_name="llama-3.1-8b-instant",
     connector_type="groq"
 )
