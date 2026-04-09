@@ -1,0 +1,102 @@
+[
+  {
+    "id": "cons_001",
+    "question": "What causes climate change?",
+    "category": "science"
+  },
+  {
+    "id": "cons_002",
+    "question": "How does the immune system work?",
+    "category": "science"
+  },
+  {
+    "id": "cons_003",
+    "question": "What are the main causes of inflation?",
+    "category": "economics"
+  },
+  {
+    "id": "cons_004",
+    "question": "How does machine learning work?",
+    "category": "technology"
+  },
+  {
+    "id": "cons_005",
+    "question": "What were the main causes of World War 1?",
+    "category": "history"
+  },
+  {
+    "id": "cons_006",
+    "question": "How does the stock market work?",
+    "category": "economics"
+  },
+  {
+    "id": "cons_007",
+    "question": "What is the theory of evolution?",
+    "category": "science"
+  },
+  {
+    "id": "cons_008",
+    "question": "How does the internet work?",
+    "category": "technology"
+  },
+  {
+    "id": "cons_009",
+    "question": "What causes earthquakes?",
+    "category": "science"
+  },
+  {
+    "id": "cons_010",
+    "question": "How does democracy work?",
+    "category": "politics"
+  },
+  {
+    "id": "cons_011",
+    "question": "What is the greenhouse effect?",
+    "category": "science"
+  },
+  {
+    "id": "cons_012",
+    "question": "How does photosynthesis work?",
+    "category": "science"
+  },
+  {
+    "id": "cons_013",
+    "question": "What causes economic recessions?",
+    "category": "economics"
+  },
+  {
+    "id": "cons_014",
+    "question": "How does DNA replication work?",
+    "category": "science"
+  },
+  {
+    "id": "cons_015",
+    "question": "What are the main causes of poverty?",
+    "category": "social"
+  },
+  {
+    "id": "cons_016",
+    "question": "How does encryption work?",
+    "category": "technology"
+  },
+  {
+    "id": "cons_017",
+    "question": "What caused the 2008 financial crisis?",
+    "category": "economics"
+  },
+  {
+    "id": "cons_018",
+    "question": "How does the human brain store memories?",
+    "category": "science"
+  },
+  {
+    "id": "cons_019",
+    "question": "What is quantum computing?",
+    "category": "technology"
+  },
+  {
+    "id": "cons_020",
+    "question": "How does natural selection work?",
+    "category": "science"
+  }
+]

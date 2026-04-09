@@ -17,20 +17,22 @@ def _get_pipeline():
 
 def check_contradiction(text_a: str, text_b: str) -> dict:
     """
-    Check if two texts contradict each other.
-
-    Uses NLI (Natural Language Inference) — a model trained to determine
-    if one statement entails, contradicts, or is neutral to another.
-
-    Returns dict with contradiction flag and confidence score.
+    Check if two texts contradict each other using NLI.
     """
     pipe = _get_pipeline()
 
-    # We frame it as: does text_b contradict text_a?
+    # Truncate to avoid token limit issues
+    text_a_short = text_a[:300]
+    text_b_short = text_b[:300]
+
+    # The hypothesis_template MUST contain {} for the label
+    # We check if text_b belongs to each category relative to text_a
+    premise = f"Context: {text_a_short} Statement: {text_b_short}"
+
     result = pipe(
-        text_b,
+        premise,
         candidate_labels=["contradiction", "entailment", "neutral"],
-        hypothesis_template="This text contradicts the following: " + text_a[:200]
+        hypothesis_template="This is an example of {}."
     )
 
     labels = result["labels"]
