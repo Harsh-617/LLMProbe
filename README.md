@@ -1,3 +1,19 @@
+---
+title: LLMProbe
+emoji: 🔬
+colorFrom: blue
+colorTo: red
+sdk: gradio
+sdk_version: 5.0.0
+app_file: app.py
+pinned: false
+---
+
+# LLMProbe
+
+Automated LLM red-teaming and reliability evaluation framework.
+Built to find where models break — before your users do.
+
 # LLMProbe
 
 **Built to find where models break, before your users do.**
