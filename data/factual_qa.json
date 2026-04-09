@@ -1,0 +1,282 @@
+[
+  {
+    "id": "sci_001",
+    "category": "science",
+    "question": "What is the chemical symbol for gold?",
+    "answer": "Au",
+    "answer_type": "exact"
+  },
+  {
+    "id": "sci_002",
+    "category": "science",
+    "question": "What is the speed of light in a vacuum in kilometers per second?",
+    "answer": "299792",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "sci_003",
+    "category": "science",
+    "question": "What planet is closest to the Sun?",
+    "answer": "Mercury",
+    "answer_type": "exact"
+  },
+  {
+    "id": "sci_004",
+    "category": "science",
+    "question": "What is the atomic number of carbon?",
+    "answer": "6",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "sci_005",
+    "category": "science",
+    "question": "What gas do plants absorb from the atmosphere during photosynthesis?",
+    "answer": "carbon dioxide",
+    "answer_type": "exact"
+  },
+  {
+    "id": "sci_006",
+    "category": "science",
+    "question": "What is the powerhouse of the cell?",
+    "answer": "mitochondria",
+    "answer_type": "exact"
+  },
+  {
+    "id": "sci_007",
+    "category": "science",
+    "question": "How many chromosomes do humans have?",
+    "answer": "46",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "sci_008",
+    "category": "science",
+    "question": "What is the chemical formula for water?",
+    "answer": "H2O",
+    "answer_type": "exact"
+  },
+  {
+    "id": "sci_009",
+    "category": "science",
+    "question": "What is the most abundant gas in Earth's atmosphere?",
+    "answer": "nitrogen",
+    "answer_type": "exact"
+  },
+  {
+    "id": "sci_010",
+    "category": "science",
+    "question": "What force keeps planets in orbit around the Sun?",
+    "answer": "gravity",
+    "answer_type": "exact"
+  },
+  {
+    "id": "hist_001",
+    "category": "history",
+    "question": "In what year did World War 2 end?",
+    "answer": "1945",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "hist_002",
+    "category": "history",
+    "question": "Who was the first President of the United States?",
+    "answer": "George Washington",
+    "answer_type": "exact"
+  },
+  {
+    "id": "hist_003",
+    "category": "history",
+    "question": "In what year did the French Revolution begin?",
+    "answer": "1789",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "hist_004",
+    "category": "history",
+    "question": "What ancient wonder was located in Alexandria?",
+    "answer": "lighthouse",
+    "answer_type": "semantic"
+  },
+  {
+    "id": "hist_005",
+    "category": "history",
+    "question": "In what year did humans first land on the Moon?",
+    "answer": "1969",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "hist_006",
+    "category": "history",
+    "question": "Who wrote the Declaration of Independence?",
+    "answer": "Thomas Jefferson",
+    "answer_type": "exact"
+  },
+  {
+    "id": "hist_007",
+    "category": "history",
+    "question": "What empire was Julius Caesar a part of?",
+    "answer": "Roman Empire",
+    "answer_type": "exact"
+  },
+  {
+    "id": "hist_008",
+    "category": "history",
+    "question": "In what year did the Berlin Wall fall?",
+    "answer": "1989",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "hist_009",
+    "category": "history",
+    "question": "Which country was the first to give women the right to vote?",
+    "answer": "New Zealand",
+    "answer_type": "exact"
+  },
+  {
+    "id": "hist_010",
+    "category": "history",
+    "question": "What was the name of the ship that sank in 1912 after hitting an iceberg?",
+    "answer": "Titanic",
+    "answer_type": "exact"
+  },
+  {
+    "id": "geo_001",
+    "category": "geography",
+    "question": "What is the capital of Australia?",
+    "answer": "Canberra",
+    "answer_type": "exact"
+  },
+  {
+    "id": "geo_002",
+    "category": "geography",
+    "question": "What is the longest river in the world?",
+    "answer": "Nile",
+    "answer_type": "exact"
+  },
+  {
+    "id": "geo_003",
+    "category": "geography",
+    "question": "How many continents are there on Earth?",
+    "answer": "7",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "geo_004",
+    "category": "geography",
+    "question": "What is the smallest country in the world by area?",
+    "answer": "Vatican City",
+    "answer_type": "exact"
+  },
+  {
+    "id": "geo_005",
+    "category": "geography",
+    "question": "What is the tallest mountain in the world?",
+    "answer": "Mount Everest",
+    "answer_type": "exact"
+  },
+  {
+    "id": "geo_006",
+    "category": "geography",
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "answer_type": "exact"
+  },
+  {
+    "id": "geo_007",
+    "category": "geography",
+    "question": "What is the capital of Japan?",
+    "answer": "Tokyo",
+    "answer_type": "exact"
+  },
+  {
+    "id": "geo_008",
+    "category": "geography",
+    "question": "Which country has the largest population in the world?",
+    "answer": "India",
+    "answer_type": "exact"
+  },
+  {
+    "id": "geo_009",
+    "category": "geography",
+    "question": "What is the capital of Brazil?",
+    "answer": "Brasilia",
+    "answer_type": "exact"
+  },
+  {
+    "id": "geo_010",
+    "category": "geography",
+    "question": "What is the largest desert in the world?",
+    "answer": "Antarctic Desert",
+    "answer_type": "exact"
+  },
+  {
+    "id": "math_001",
+    "category": "math",
+    "question": "What is the value of pi rounded to 2 decimal places?",
+    "answer": "3.14",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "math_002",
+    "category": "math",
+    "question": "What is the square root of 144?",
+    "answer": "12",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "math_003",
+    "category": "math",
+    "question": "How many sides does a hexagon have?",
+    "answer": "6",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "math_004",
+    "category": "math",
+    "question": "What is 15 percent of 200?",
+    "answer": "30",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "math_005",
+    "category": "math",
+    "question": "What is the sum of angles in a triangle in degrees?",
+    "answer": "180",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "tech_001",
+    "category": "technology",
+    "question": "What does CPU stand for?",
+    "answer": "Central Processing Unit",
+    "answer_type": "exact"
+  },
+  {
+    "id": "tech_002",
+    "category": "technology",
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "answer_type": "exact"
+  },
+  {
+    "id": "tech_003",
+    "category": "technology",
+    "question": "In what year was the first iPhone released?",
+    "answer": "2007",
+    "answer_type": "numeric"
+  },
+  {
+    "id": "tech_004",
+    "category": "technology",
+    "question": "What programming language was created by Guido van Rossum?",
+    "answer": "Python",
+    "answer_type": "exact"
+  },
+  {
+    "id": "tech_005",
+    "category": "technology",
+    "question": "What does RAM stand for?",
+    "answer": "Random Access Memory",
+    "answer_type": "exact"
+  }
+]
