@@ -8,6 +8,8 @@ from llmprobe.probes.consistency import ConsistencyProbe
 from llmprobe.probes.adversarial import AdversarialProbe
 from llmprobe.probes.bias import BiasProbe
 from llmprobe.scoring.aggregator import ScoreAggregator, ReliabilityReport
+from llmprobe.reporting.json_reporter import save_json_report
+from llmprobe.reporting.markdown_reporter import save_markdown_report
 
 
 # Map dimension names to probe classes
@@ -99,6 +101,12 @@ class PipelineRunner:
         # Aggregate all probe results into final report
         aggregator = ScoreAggregator(config=self.config)
         report = aggregator.aggregate(probe_results)
+
+        # Save reports to disk
+        save_json_report(report, output_dir=self.config.output_dir)
+        save_markdown_report(report, output_dir=self.config.output_dir)
+
+        return report
 
         return report
 
