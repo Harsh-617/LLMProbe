@@ -1,18 +1,34 @@
 import re
+import unicodedata
 from llmprobe.evaluators.similarity import compute_similarity_to_reference
+
+
+def normalize_text(text: str) -> str:
+    """
+    Normalize text for comparison:
+    - Lowercase
+    - Convert unicode characters to ASCII equivalent (H₂O → H2O)
+    - Remove commas from numbers (299,792 → 299792)
+    - Strip whitespace
+    """
+    # Normalize unicode — converts subscripts/superscripts to base chars
+    text = unicodedata.normalize("NFKD", text)
+    # Encode to ASCII and back to drop non-ASCII chars
+    text = text.encode("ascii", "ignore").decode("ascii")
+    # Lowercase
+    text = text.lower().strip()
+    return text
 
 
 def evaluate_exact(response: str, answer: str) -> dict:
     """
     Check if the correct answer appears in the model's response.
-    Case insensitive. Partial match counts.
-
-    Returns dict with score (0 or 1) and explanation.
+    Case insensitive, unicode normalized.
     """
-    response_lower = response.lower().strip()
-    answer_lower = answer.lower().strip()
+    response_normalized = normalize_text(response)
+    answer_normalized = normalize_text(answer)
 
-    correct = answer_lower in response_lower
+    correct = answer_normalized in response_normalized
 
     return {
         "score": 1.0 if correct else 0.0,
@@ -25,14 +41,18 @@ def evaluate_exact(response: str, answer: str) -> dict:
 def evaluate_numeric(response: str, answer: str) -> dict:
     """
     Extract numbers from the model's response and check if
-    the correct number appears.
-
-    Returns dict with score (0 or 1) and explanation.
+    the correct number appears. Handles commas in numbers
+    like 299,792 by removing them before extraction.
     """
-    # Extract all numbers from the response (handles decimals too)
-    numbers_in_response = re.findall(r"\d+\.?\d*", response)
-    expected_number = answer.strip()
+    # Remove commas from numbers in response (299,792 → 299792)
+    response_clean = response.replace(",", "")
 
+    # Extract all numbers, then strip trailing periods
+    # e.g. "6." at end of sentence becomes "6"
+    raw_numbers = re.findall(r"\d+\.?\d*", response_clean)
+    numbers_in_response = [n.rstrip(".") for n in raw_numbers]
+
+    expected_number = answer.strip()
     correct = expected_number in numbers_in_response
 
     return {
@@ -48,10 +68,6 @@ def evaluate_semantic(response: str, answer: str, threshold: float = 0.6) -> dic
     """
     Use semantic similarity to check if the response conveys
     the correct answer, even if worded differently.
-
-    Threshold 0.6 means we consider it correct if similarity >= 0.6.
-
-    Returns dict with score (0 or 1) and explanation.
     """
     similarity = compute_similarity_to_reference(response, answer)
     correct = similarity >= threshold
@@ -69,15 +85,7 @@ def evaluate_semantic(response: str, answer: str, threshold: float = 0.6) -> dic
 def evaluate_response(response: str, answer: str, answer_type: str) -> dict:
     """
     Main entry point. Routes to the correct evaluation method
-    based on the answer_type field from our dataset.
-
-    Args:
-        response: The model's response text
-        answer: The correct answer from our dataset
-        answer_type: "exact", "numeric", or "semantic"
-
-    Returns:
-        Dict with score, correct flag, and metadata
+    based on answer_type.
     """
     if answer_type == "exact":
         return evaluate_exact(response, answer)
